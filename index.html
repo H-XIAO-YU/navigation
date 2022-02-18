@@ -12,13 +12,14 @@
 
 <!--在收藏夹显示图标：-->
 <link rel="shortcut icon" href="./img/view-grid.svg" type="image/x-icon">
+<link rel="stylesheet" href="./css/APlayer.min.css">
 <meta name="keywords" content="导航,网址"/>
 <meta name="description" content="简单但实用的导航"/>
 
 
 <!--CSS 若不需要变动样式不用改-->
 <!--本地样式-->
-<link href="./zui.min.css" rel="stylesheet" type="text/css"/>
+<link href="./css/zui.min.css" rel="stylesheet" type="text/css"/>
 <!--在线样式-->
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/css/zui.min.css" rel="stylesheet" type="text/css"/> -->
 <style type="text/css">
@@ -772,6 +773,9 @@ input::-webkit-input-placeholder {
             <!--搜索栏-->
             <section class="sousuo">
             <div class="search">
+
+                <div id="player"></div>
+
                 <div class="search-box">
                     <button class="search-engine-name" id="search-engine-name">搜索引擎</button>
                     <input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索"/>
@@ -1022,12 +1026,15 @@ input::-webkit-input-placeholder {
         <img src="./img/Get-top.svg"/>
         <!-- <i class="icon icon-arrow-up"></i> -->
     </div>
+ 
     
-    <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
-    <script src="jquery-1.11.0.min.js"></script>
+      
     <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+
     
-<script>
+<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"> 
 window.onscroll = function(){
 //回到顶部
 var sllTop = document.documentElement.scrollTop||document.body.scrollTop;
@@ -1153,6 +1160,24 @@ $("#search-btn").click(function(){
   }
 });
 </script>
+ 
+<!--引入APlayer.min.js-->
+<script src="./js/APlayer.min.js"></script> 
+<script src="js/Meting.min.js"></script>
+<meting-js 
+    server="netease" 
+    type="playlist" 
+    id="2239728234"
+    fixed="true" 
+    autoplay="true"
+    loop="all"
+    order="random"
+    preload="auto"
+    list-folded="ture"
+    list-max-height="500px"
+    lrc-type="0">
+</meting-js>
+
 </div>
 </body>
 </html>
