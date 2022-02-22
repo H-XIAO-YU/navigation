@@ -9,7 +9,7 @@
 <title>导航 - 哎嘿</title>
 
 <!--图标-->
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
 <!--在网页标题左侧显示：-->
 <link rel="icon" href="./img/view-grid.svg" type="image/x-icon">
 
@@ -40,7 +40,7 @@ a:hover,a:active,a:focus {
     text-decoration: none;
 }
 
-/*直接加载图片*/
+/*调用api做背景图片*/
 body{
     background-image: url(https://acg.zjgsuzjx.top/api);
     background-repeat:no-repeat;
@@ -766,10 +766,10 @@ input::-webkit-input-placeholder {
             <ul class="scrollcontent">
                 <!--左侧目录，按照需要修改和添加，参考已有的修改名称和href-->
                 <li><a href="#row-1"><i class="fa fa-gamepad"></i>游戏</a></li>
-                <li><a href="#row-2">动漫</a></li>
-                <li><a href="#row-3">磁力搜索引擎</a></li>
-                <li><a href="#row-4">壁纸</a></li>
-                <li><a href="#row-5">工具</a></li>
+                <li><a href="#row-2"><i class="fa fa-star-o"></i>动漫</a></li>
+                <li><a href="#row-3"><i class="fa fa-search"></i>磁力搜索引擎</a></li>
+                <li><a href="#row-4"><i class="fa fa-photo"></i>壁纸</a></li>
+                <li><a href="#row-5"><i class="fa fa-wrench"></i>工具</a></li>
                 <!-- <li><a href="#row-5">下载</a></li> -->
             </ul>
         </div>
@@ -802,7 +802,7 @@ input::-webkit-input-placeholder {
                 <div class="container-fluid">
                     <div class="row">
                         <div class="item-tit">
-                            <strong>游戏</strong>
+                            <strong><i class="fa fa-gamepad"></i>游戏</strong>
                         </div>
                         <!--获取内容列表-->
                         <div class="clearfix ">
@@ -852,7 +852,7 @@ input::-webkit-input-placeholder {
                     <div class="container-fluid">
                         <div class="row">
                             <div class="item-tit">
-                                <strong>动漫</strong>
+                                <strong><i class="fa fa-star-o"></i>动漫</strong>
                             </div>
                             <!--获取内容列表-->
                             <div class="clearfix ">
@@ -890,7 +890,7 @@ input::-webkit-input-placeholder {
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="item-tit">
-                                    <strong>磁力搜索引擎</strong>
+                                    <strong><i class="fa fa-search"></i>磁力搜索引擎</strong>
                                 </div>
                                 <!--获取内容列表-->
                                 <div class="clearfix ">                                    
@@ -939,7 +939,7 @@ input::-webkit-input-placeholder {
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="item-tit">
-                                    <strong>壁纸</strong>
+                                    <strong><i class="fa fa-photo"></i>壁纸</strong>
                                 </div>
                                 <!--获取内容列表-->
                                 <div class="clearfix ">
@@ -970,7 +970,7 @@ input::-webkit-input-placeholder {
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="item-tit">
-                                    <strong>工具</strong>
+                                    <strong><i class="fa fa-wrench"></i>工具</strong>
                                 </div>
                                 <!--获取内容列表-->
                                 <div class="clearfix ">
