@@ -47,7 +47,7 @@ body{
     background-attachment:fixed;
     overflow-x: hidden;
     overflow-y: auto;
-    opacity: 0.8;
+
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -534,7 +534,8 @@ input::-webkit-input-placeholder {
 }
 @media (min-width: 768px) {
     .col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-        padding: 0 10px
+        padding: 0 10px;
+        opacity: 0.8;
     }
     #content .main {
         padding-top: 51px;
@@ -632,6 +633,7 @@ input::-webkit-input-placeholder {
         top: 60px;
         left: 0;
         z-index: 1;
+        opacity: 0.8;
     }
     .left-bar .header {
         padding: 11px 0px;
@@ -725,6 +727,7 @@ input::-webkit-input-placeholder {
     }
     .col-md-3 {
         width: 20%;
+        opacity: 0.8;
     }
 }
 </style>
@@ -1005,11 +1008,18 @@ input::-webkit-input-placeholder {
                                         </a>
                                     </div>
                                     <div class="col-md-3 col-sm-4 col-xs-6">
+                                        <a href="https://chrome.zzzmh.cn/" class="card-link" target="_blank">
+                                        <div class="card-tit">极简插件</div>
+                                        <div class="card-desc">获取谷歌插件</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6">
                                         <a href="https://adguard-vpn.com/zh_cn/welcome.html" class="card-link" target="_blank">
                                         <div class="card-tit">adguard-vpn</div>
                                         <div class="card-desc">梯子</div>
                                         </a>
-                                    </div>                                    
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1225,9 +1235,9 @@ storage-name（储存名称）	metingjs	存储播放器设置的localStorage键
  live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
  live2d_settings['waifuSize'] = '300x300';          // 看板娘大小
  live2d_settings['waifuTipsSize'] = '200x100';      // 提示框大小
- live2d_settings['waifuFontSize'] = '30px';         // 提示框字体
+ live2d_settings['waifuFontSize'] = '15px';         // 提示框字体
  live2d_settings['waifuEdgeSide'] = 'right:55';     // 看板娘贴边方向
- live2d_settings['waifuToolFont'] = '15px';         // 工具栏字体
+ live2d_settings['waifuToolFont'] = '30px';         // 工具栏字体
  live2d_settings['waifuToolLine'] = '50px';         // 工具栏行高
  live2d_settings['waifuToolTop'] = '-60px';         // 工具栏顶部边距
  live2d_settings['waifuDraggable'] = 'axis-x';      // 拖拽样式
