@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <!--头部信息-->
-    <meta http-equiv="refresh" content="0;url=http://175.178.69.233:8082">
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- <meta http-equiv="refresh" content="0;url=http://175.178.69.233:8082"> -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- 将http转化为https -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--title keywords description 请改为自己的-->
     <title>导航 - 哎嘿</title>
 
@@ -20,34 +21,38 @@
     <link rel="shortcut icon" href="./img/view-grid.svg" type="image/x-icon">
 
 
-    <link rel="stylesheet" type="text/css" href="./assets/waifu.min.css?v=1.4.2"/>
+    <link rel="stylesheet" type="text/css" href="./assets/waifu.min.css?v=1.4.2" />
 
     <link rel="stylesheet" href="./css/APlayer.min.css">
-    <meta name="keywords" content="导航,网址"/>
-    <meta name="description" content="简单但实用的导航"/>
+    <meta name="keywords" content="导航,网址" />
+    <meta name="description" content="简单但实用的导航" />
 
 
     <!--CSS 若不需要变动样式不用改-->
     <!--本地样式-->
-    <link href="./css/zui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/zui.min.css" rel="stylesheet" type="text/css" />
     <!--在线样式-->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/css/zui.min.css" rel="stylesheet" type="text/css"/> -->
     <style type="text/css">
         ul {
             padding: 0;
         }
+
         li {
             list-style: none;
         }
-        a:hover,a:active,a:focus {
+
+        a:hover,
+        a:active,
+        a:focus {
             text-decoration: none;
         }
 
         /*调用api做背景图片*/
-        body{
+        body {
             background-image: url(https://www.dmoe.cc/random.php);
-            background-repeat:no-repeat;
-            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             overflow-x: hidden;
             overflow-y: auto;
 
@@ -55,12 +60,64 @@
             -webkit-background-size: cover;
             -o-background-size: cover;
         }
-        i.icon,i.fa {
+
+        i.icon,
+        i.fa {
             margin-right: 6px
         }
-        .col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+
+        .col,
+        .col-xs-1,
+        .col-xs-2,
+        .col-xs-3,
+        .col-xs-4,
+        .col-xs-5,
+        .col-xs-6,
+        .col-xs-7,
+        .col-xs-8,
+        .col-xs-9,
+        .col-xs-10,
+        .col-xs-11,
+        .col-xs-12,
+        .col-sm-1,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-md-1,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-lg-1,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12 {
             padding: 0px 5px;
         }
+
         header {
             position: fixed;
             top: 0;
@@ -70,6 +127,7 @@
             height: 50px;
             background: #FFF;
         }
+
         header .logo {
             font-size: 20px;
             height: 50px;
@@ -79,11 +137,13 @@
             z-index: 99;
             border-bottom: 1px solid #e8e8e8;
             background: #FFF;
-            text-align:center;
+            text-align: center;
         }
+
         header .main {
             position: relative;
         }
+
         header .nav {
             width: 100%;
             margin-left: 25px;
@@ -101,14 +161,17 @@
             top: -300px;
             left: 0;
         }
+
         header .showNav {
             top: 50px;
-            box-shadow: 0 5px 5px rgba(204,204,204,.15);
-            -moz-box-shadow: 0 5px 5px rgba(204,204,204,.15);
+            box-shadow: 0 5px 5px rgba(204, 204, 204, .15);
+            -moz-box-shadow: 0 5px 5px rgba(204, 204, 204, .15);
         }
+
         header .nav li {
             font-size: 16px;
         }
+
         header .nav a {
             display: block;
             line-height: 40px;
@@ -117,14 +180,17 @@
             padding: 0 25px;
             border-bottom: 1px solid #f5f5f5;
         }
+
         header .nav a:hover {
             border-color: #459df5;
             color: #459df5;
         }
+
         header .head-btn {
             float: right;
             line-height: 60px;
         }
+
         header .head-btn a {
             margin-left: 5px;
             display: inline-block;
@@ -143,15 +209,18 @@
             -o-transition: all .2s;
             /* Opera */
         }
+
         header .head-btn a:hover {
             background: #03b8cf;
             color: #FFF;
             border: 1px solid #03b8cf;
         }
+
         header .head-btn a>i {
             margin-right: 0px;
             font-size: 15px;
         }
+
         header .nav-btn {
             position: fixed;
             border: none;
@@ -162,10 +231,12 @@
             margin-top: 10px;
             z-index: 100
         }
+
         header .nav-btn {
             left: inherit;
             right: 10px;
         }
+
         header .nav-btn .icon-line {
             display: block;
             margin: 6px 0;
@@ -181,9 +252,11 @@
             -o-transition: all .4s ease;
             /* Opera */
         }
+
         header .nav-btn .middle {
             margin: 0 auto;
         }
+
         header .animated2 .top {
             transform: translateY(8px) rotateZ(45deg);
             -ms-transform: translateY(8px) rotateZ(45deg);
@@ -195,9 +268,11 @@
             -o-transform: translateY(8px) rotateZ(45deg);
             /* Opera */
         }
+
         header .animated2 .middle {
             width: 0;
         }
+
         header .animated2 .bottom {
             transform: translateY(-8px) rotateZ(-45deg);
             -ms-transform: translateY(-8px) rotateZ(-45deg);
@@ -209,9 +284,11 @@
             -o-transform: translateY(-8px) rotateZ(-45deg);
             /* Opera */
         }
-        .font-li{
+
+        .font-li {
             color: #ccc;
         }
+
         .left-bar {
             position: fixed;
             top: 50px;
@@ -238,10 +315,12 @@
             -o-transform: translateZ(0);
             /* Opera */
         }
+
         .left-bar .header {
             padding: 0px 15px;
             border-bottom: 1px solid #464646;
         }
+
         .left-bar .header h2 {
             font-size: 17px;
             line-height: 40px;
@@ -252,11 +331,13 @@
             display: block;
             color: #ccc;
         }
+
         .left-bar .menu {
             height: 450px;
             margin-bottom: 15px;
             border-bottom: 1px solid #424242
         }
+
         .left-bar .menu ul li a {
             display: block;
             height: 35px;
@@ -265,6 +346,7 @@
             color: #777;
             padding-left: 38px;
         }
+
         .scrollcontent {
             width: 100%;
             top: 0;
@@ -272,23 +354,28 @@
             padding-right: 4px;
             padding-top: 5px
         }
+
         .left-bar .menu ul li a:hover {
             background: #f5f5f5
         }
+
         .left-bar .menu ul li i.fa {
             width: 15px;
             text-align: center;
             margin-right: 20px
         }
-        .left-bar .tree li.open > ul::-webkit-scrollbar {
+
+        .left-bar .tree li.open>ul::-webkit-scrollbar {
             width: 3px;
             margin-right: 2px
         }
+
         .menu-about p {
             font-size: 12px;
             color: #ccc;
             text-align: center;
         }
+
         #content {
             position: absolute;
             left: 0;
@@ -296,20 +383,25 @@
             top: 0;
             bottom: 0;
         }
-        #content > .Off-left-menu {
+
+        #content>.Off-left-menu {
             display: none;
         }
-        #content > div.center-main {
+
+        #content>div.center-main {
             margin: 0 auto;
         }
+
         .sousuo {
             padding: 35px 0;
         }
+
         .search {
             position: relative;
             width: 100%;
             margin: 0 auto;
         }
+
         .search-box {
             height: 50px;
             /*box-shadow: 0px 0px 2px 0px #ccc;*/
@@ -321,6 +413,7 @@
             flex-wrap: wrap;
             border: 1px solid #e6e6e6
         }
+
         .search-engine-name {
             width: 69px;
             height: 50px;
@@ -330,6 +423,7 @@
             font-weight: bold;
             outline: none;
         }
+
         .search-input {
             box-sizing: border-box;
             flex: 1;
@@ -341,11 +435,13 @@
             outline: none;
             padding-left: 6px;
         }
+
         input::-webkit-input-placeholder {
             font-size: 12px;
             letter-spacing: 1px;
             color: #ccc;
         }
+
         .search-btn {
             width: 80px;
             height: 50px;
@@ -355,6 +451,7 @@
             font-weight: bold;
             outline: none;
         }
+
         .search-engine {
             position: absolute;
             top: 60px;
@@ -368,17 +465,20 @@
             display: none;
             z-index: 999
         }
+
         .search-engine-head {
             overflow: hidden;
             margin-bottom: 10px;
             padding-right: 15px;
         }
+
         .search-engine-tit {
             float: left;
             margin: 0;
             font-size: 14px;
             color: #999;
         }
+
         .search-engine ul::before {
             content: '';
             width: 0px;
@@ -390,6 +490,7 @@
             border-bottom: 8px solid #fff;
             border-left: 8px solid transparent;
         }
+
         .search-engine-list::after {
             content: '';
             width: 70px;
@@ -398,6 +499,7 @@
             top: -17px;
             left: 1px;
         }
+
         .search-engine-list li {
             float: left;
             width: 30%;
@@ -409,6 +511,7 @@
             color: #999;
             cursor: pointer
         }
+
         .search-engine-list li img {
             width: 25px;
             height: 25px;
@@ -417,36 +520,44 @@
             margin-right: 5px;
             margin-top: 2.5px;
         }
+
         #content .content-box {
             padding-top: 51px
         }
+
         .content-box {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 10px;
         }
+
         .item {
             width: 100%;
         }
-        .item > .container-fluid {
+
+        .item>.container-fluid {
             padding-top: 0;
             margin-top: 0;
         }
-        .item > .container-fluid .row {
+
+        .item>.container-fluid .row {
             padding: 10px 5px;
         }
-        .item-tit > strong {
-            color:#141313;
+
+        .item-tit>strong {
+            color: #141313;
             font-size: 18px;
-            font-weight:bold;
+            font-weight: bold;
             display: block;
             margin-bottom: 10px;
             padding-left: 5px;
         }
-        .item-tit > strong > i {
+
+        .item-tit>strong>i {
             margin-right: 5px;
             font-size: 18px;
         }
+
         .card-link {
             display: block;
             padding: 10px 10px;
@@ -462,6 +573,7 @@
             -o-transition: all 0.2s ease-out;
             /* Opera */
         }
+
         .card-link:hover {
             transform: translateY(-5px);
             -ms-transform: translateY(-5px);
@@ -476,6 +588,7 @@
             -moz-box-shadow: 4px 4px 10px rgba(204, 204, 204, 0.5);
             /* Firefox */
         }
+
         .card-tit {
             height: 20px;
             font-size: 14px;
@@ -484,12 +597,14 @@
             text-overflow: ellipsis;
             white-space: normal;
         }
+
         .card-tit img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-right: 5px;
         }
+
         .card-desc {
             color: gray;
             font-size: 12px;
@@ -502,15 +617,17 @@
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
         }
+
         .content-box .list-box {
             background: #FFF;
             padding: 20px 10px 0px 10px;
             margin: 0;
         }
+
         #get-top {
             width: 40px;
             height: 40px;
-            background:#d0d0d0;
+            background: #d0d0d0;
             color: #FFF;
             position: fixed;
             right: 15px;
@@ -523,10 +640,12 @@
             z-index: 100;
 
         }
+
         #get-top i {
             margin: 0;
             font-size: 20px;
         }
+
         .footer {
             padding: 15px 20px 10px 20px;
             border-top: 1px solid #d0d0d0;
@@ -535,22 +654,76 @@
             font-size: 14px;
             color: #5d5d5d;
         }
+
         @media (min-width: 768px) {
-            .col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+
+            .col,
+            .col-xs-1,
+            .col-xs-2,
+            .col-xs-3,
+            .col-xs-4,
+            .col-xs-5,
+            .col-xs-6,
+            .col-xs-7,
+            .col-xs-8,
+            .col-xs-9,
+            .col-xs-10,
+            .col-xs-11,
+            .col-xs-12,
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12,
+            .col-md-1,
+            .col-md-2,
+            .col-md-3,
+            .col-md-4,
+            .col-md-5,
+            .col-md-6,
+            .col-md-7,
+            .col-md-8,
+            .col-md-9,
+            .col-md-10,
+            .col-md-11,
+            .col-md-12,
+            .col-lg-1,
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-4,
+            .col-lg-5,
+            .col-lg-6,
+            .col-lg-7,
+            .col-lg-8,
+            .col-lg-9,
+            .col-lg-10,
+            .col-lg-11,
+            .col-lg-12 {
                 padding: 0 10px;
                 opacity: 0.8;
             }
+
             #content .main {
                 padding-top: 51px;
             }
+
             .sousuo {
                 padding: 10px 0 50px 0;
                 margin-top: 0;
             }
+
             .sousuo-form {
                 width: 100%;
                 margin: 0 auto;
             }
+
             #input {
                 outline: none;
                 padding: 0 10px;
@@ -561,32 +734,39 @@
                 display: block;
                 padding-left: 90px;
             }
+
             .link-box {
                 width: 12.5%;
                 float: left
             }
-            .item-tit > strong {
-                color:#141313;
-                font-weight:bold;
+
+            .item-tit>strong {
+                color: #141313;
+                font-weight: bold;
                 padding: 5px 0 0 10px;
                 margin-bottom: 10px;
             }
+
             .get-home {
                 margin: 0;
                 margin-top: 20px;
             }
+
             .footer {
                 margin-top: 20px;
             }
         }
+
         @media (min-width: 992px) {
             header {
                 height: 60px;
                 border-bottom: 1px solid #e8e8e8;
             }
+
             header .main {
                 padding: 0 22px;
             }
+
             header .logo {
                 float: left;
                 font-size: 22px;
@@ -594,16 +774,19 @@
                 font-weight: 400;
                 border: none;
             }
+
             header .logo a {
                 display: block;
                 line-height: 50px;
                 color: #484848;
                 font-weight: 400;
             }
+
             header .logo img {
                 width: 30px;
                 vertical-align: -10px;
             }
+
             header .nav {
                 float: left;
                 margin-left: 25px;
@@ -615,10 +798,12 @@
                 width: auto;
                 box-shadow: none;
             }
+
             header .nav li {
                 float: left;
                 font-size: 16px;
             }
+
             header .nav a {
                 display: block;
                 line-height: 59px;
@@ -626,10 +811,12 @@
                 padding: 0 18px;
                 border-bottom: 1px solid #e8e8e8;
             }
+
             header .nav a:hover {
                 border-color: #459df5;
                 color: #459df5;
             }
+
             .left-bar {
                 height: 100%;
                 background: #FFF;
@@ -638,12 +825,14 @@
                 z-index: 1;
                 opacity: 0.8;
             }
+
             .left-bar .header {
                 padding: 11px 0px;
                 border-bottom: none;
                 margin: 0 25px;
                 padding-top: 15px;
             }
+
             .left-bar .header h2 {
                 color: #28b779;
                 font-size: 16px;
@@ -652,82 +841,104 @@
                 border-left: 3px solid #28b779;
                 padding-left: 10px;
             }
+
             .left-bar .menu {
                 height: 600px;
                 border-top: 1px solid #f2f2f2;
                 border-bottom: 1px solid #f2f2f2
             }
+
             .left-bar .tree-menu {
                 border-bottom: 1px solid #e8e8e8;
             }
-            .left-bar .tree li.open > ul {
+
+            .left-bar .tree li.open>ul {
                 height: 281px;
                 background: #f5f5f5;
             }
+
             .tree-menu li li a {
                 color: #797979;
                 font-size: 14px;
             }
+
             .search {
                 width: 650px;
             }
+
             .search-engine {
                 width: 650px;
             }
+
             .search-engine-list li {
                 width: 112px;
                 margin: 0 15px 15px 0;
             }
+
             #content .main {
                 margin-left: 200px;
                 padding-top: 70px
             }
+
             .content-box {
                 padding: 0 10px;
                 padding-top: 61px
             }
+
             .nav-item .container-fluid {
                 padding: 20px 20px 10px 20px;
             }
-            .item > .container-fluid .row {
+
+            .item>.container-fluid .row {
                 padding: 0;
             }
+
             .card-box .col-md-3 {
                 padding: 0 7.5px;
             }
+
             .card-link {
                 margin-bottom: 15px;
             }
+
             .main .list-box .menu-list {
                 margin: 0px 10px 20px 10px;
             }
-            .nav-tabs > li > a {
+
+            .nav-tabs>li>a {
                 padding: 4px 15px;
             }
+
             .footer {
                 margin-top: 30px;
             }
         }
+
         @media (min-width: 1200px) {
             header .nav a {
                 padding: 0 25px;
             }
+
             .content-box {
                 padding: 0 20px;
             }
+
             .sousuo-form {
                 width: 60%
             }
-            .item > .container-fluid {
+
+            .item>.container-fluid {
                 padding: 0;
                 padding-top: 91px;
                 margin-top: -65px;
             }
         }
+
         @media (min-width: 1700px) {
             .content-box {
                 max-width: 1400px;
             }
+
             .col-md-3 {
                 width: 20%;
                 opacity: 0.8;
@@ -735,222 +946,412 @@
         }
     </style>
 </head>
+
 <body id="nav_body">
-<!--[if lt IE 10]>
+    <!--[if lt IE 10]>
 <div class="alert alert-danger">
     您正在使用
     <strong>过时的</strong> 浏览器. 请更换一个更好的浏览器来提升用户体验.
 </div>
-<![endif]--><!--头部导航条-->
-<header>
-    <div class="main">
-        <h1 class="logo">
-            <a href="https://h-xiao-yu.github.io/navigation">
-                <span>导航</span>
-            </a>
-        </h1>
-        <!--顶部导航条-->
-        <nav class="nav">
-            <ul>
-                <li><a href="https://github.com/H-XIAO-YU/navigation/" target="_blank">MyGitHup</a></li>
-                <li><a href="https://www.coderutil.com" target="_blank">程序员盒子</a></li>
-                <li><a href="http://175.178.69.233/index.php" target="_blank">OneNav</a></li>
-            </ul>
-        </nav>
-        <!--便携设备右上角菜单-->
-        <button class="nav-btn visible-xs visible-sm"><span class="icon-line top"></span><span class="icon-line middle"></span><span class="icon-line bottom"></span>
-        </button>
-    </div>
-</header>
-<div id="content">
-    <!--左侧目录，导航跳转-->
-    <div class="left-bar">
-        <div class="header">
-            <h2>目录</h2>
+<![endif]-->
+    <!--头部导航条-->
+    <header>
+        <div class="main">
+            <h1 class="logo">
+                <a href="https://h-xiao-yu.github.io/navigation">
+                    <span>导航</span>
+                </a>
+            </h1>
+            <!--顶部导航条-->
+            <nav class="nav">
+                <ul>
+                    <li><a href="https://github.com/H-XIAO-YU/navigation/" target="_blank">MyGitHup</a></li>
+                    <li><a href="https://www.coderutil.com" target="_blank">程序员盒子</a></li>
+                    <li><a href="http://175.178.69.233/index.php" target="_blank">OneNav</a></li>
+                </ul>
+            </nav>
+            <!--便携设备右上角菜单-->
+            <button class="nav-btn visible-xs visible-sm"><span class="icon-line top"></span><span
+                    class="icon-line middle"></span><span class="icon-line bottom"></span>
+            </button>
         </div>
-        <div class="menu" id="menu">
-            <ul class="scrollcontent" id="jsonUrlType">
-                <!--左侧目录，按照需要修改和添加，参考已有的修改名称和href-->
-            </ul>
-        </div>
-    </div>
-    <!--内容-->
-    <div class="main">
-        <div class="container content-box" id="templist">
-            <!--搜索栏-->
-            <section class="sousuo">
-                <div class="search">
-                    <div class="search-box">
-                        <button class="search-engine-name" id="search-engine-name">搜索引擎</button>
-                        <input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索"/>
-                        <button class="search-btn" id="search-btn">搜索</button>
-                    </div>
-                    <!-- 搜索引擎 -->
-                    <div class="search-engine">
-                        <div class="search-engine-head">
-                            <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
-                        </div>
-                        <ul class="search-engine-list">
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-        <!--页脚-->
-        <footer class="footer">
-            <div class="container">
-                <div class="rwo">
-                    <div class="col-md-12">
-                        <p>
-                            本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：huangxiaoyu13@foxmail.com
-                        </p>
-                    </div>
-                </div>
+    </header>
+    <div id="content">
+        <!--左侧目录，导航跳转-->
+        <div class="left-bar">
+            <div class="header">
+                <h2>目录</h2>
             </div>
-        </footer>
+            <div class="menu" id="menu">
+                <ul class="scrollcontent" id="jsonUrlType">
+                    <!--左侧目录，按照需要修改和添加，参考已有的修改名称和href-->
+                    <li><a href="#row-0"><i class="fa fa-gamepad"></i>游戏</a></li>
+                    <li><a href="#row-1"><i class="fa fa-star-o"></i>动漫</a></li>
+                    <li><a href="#row-2"><i class="fa fa-photo"></i>壁纸</a></li>
+                    <li><a href="#row-3"><i class="fa fa-search"></i>磁力搜索引擎</a></li>
+                    <li><a href="#row-4"><i class="fa fa-wrench"></i>工具</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--内容-->
+        <div class="main">
+            <div class="container content-box" id="templist">
+                <!--搜索栏-->
+                <section class="sousuo">
+                    <div class="search">
+                        <div class="search-box">
+                            <button class="search-engine-name" id="search-engine-name">搜索引擎</button>
+                            <input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索">
+                            <button class="search-btn" id="search-btn">搜索</button>
+                        </div>
+                        <!-- 搜索引擎 -->
+                        <div class="search-engine">
+                            <div class="search-engine-head">
+                                <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <!--内容区域-->
-    </div>
-    <div id="get-top"  title="回到顶部">
-        <img src="./img/Get-top.svg"/>
-    </div>
-    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+                <section class="item card-box" id="row-0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="item-tit"><strong><i class="fa fa-gamepad"></i>游戏</strong>
+                                <div class="clearfix" id="jsonList0">
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.ali213.net/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">游侠网</div>
+                                            <div class="card-desc">白嫖网站一号</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="http://www.flysheep6.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">flysheep</div>
+                                            <div class="card-desc">资源避难所</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://steamunlocked.net/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">steamunlock</div>
+                                            <div class="card-desc">steam上的游戏基本都有，部分游戏没有bt下载贼慢</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.3dmgame.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">3DM</div>
+                                            <div class="card-desc">白嫖网站二号</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://game.ali213.net/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">游侠网论坛</div>
+                                            <div class="card-desc">一号论坛</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://bbs.3dmgame.com/forum.php"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">3DM论坛</div>
+                                            <div class="card-desc">二号论坛</div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item card-box" id="row-1">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="item-tit"><strong><i class="fa fa-star-o"></i>动漫</strong>
+                                <div class="clearfix" id="jsonList1">
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.age.tv"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">AGE动漫</div>
+                                            <div class="card-desc">动漫更新速度快的一批</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="http://www.ysjdm.net/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">異世界動漫</div>
+                                            <div class="card-desc">又一个宝藏网站</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.bilibili.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">哔哩哔哩</div>
+                                            <div class="card-desc">小破站</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://mikanani.me/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">蜜柑计划</div>
+                                            <div class="card-desc">动漫下载（更新速度较慢）</div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item card-box" id="row-2">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="item-tit"><strong><i class="fa fa-photo"></i>壁纸</strong>
+                                <div class="clearfix" id="jsonList2">
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://ss.netnr.com/wallpaper"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">NET壁纸</div>
+                                            <div class="card-desc">壁纸来源于小鸟壁纸</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://bz.zzzmh.cn/index"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">极简壁纸</div>
+                                            <div class="card-desc">宝藏级壁纸网站</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.wallpapermaiden.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">High Quality Wallpapers,</div>
+                                            <div class="card-desc">国外的壁纸网站</div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item card-box" id="row-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="item-tit"><strong><i class="fa fa-search"></i>磁力搜索引擎</strong>
+                                <div class="clearfix" id="jsonList3">
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://bt1207ba.xyz/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">bt1207</div>
+                                            <div class="card-desc">磁力</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://skrbtba.xyz/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">shrBT</div>
+                                            <div class="card-desc">磁力</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://ilemon04.xyz/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">柠檬磁力</div>
+                                            <div class="card-desc">磁力</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.aiosearch.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">AIO</div>
+                                            <div class="card-desc">功能强大(缺点：英语看的头疼，还有广告)</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a
+                                            href="https://rarbgaccess.org/index80.php" class="card-link"
+                                            target="_blank">
+                                            <div class="card-tit">RARBG</div>
+                                            <div class="card-desc">国外的站啥都有正紧不正经的都有(缺点：搜索关键字只能是英语)</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.tokyotosho.info/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">老司机图书馆</div>
+                                            <div class="card-desc">东京图书馆懂得都懂</div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item card-box" id="row-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="item-tit"><strong><i class="fa fa-wrench"></i>工具</strong>
+                                <div class="clearfix" id="jsonList4">
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a
+                                            href="https://spring.io/projects/spring-framework" class="card-link"
+                                            target="_blank">
+                                            <div class="card-tit">Spring Framework Documentation</div>
+                                            <div class="card-desc">spring文档</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://mvnrepository.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">Maven</div>
+                                            <div class="card-desc">Maven文档</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a
+                                            href="https://tool.oschina.net/apidocs/apidoc?api=jdk-zh" class="card-link"
+                                            target="_blank">
+                                            <div class="card-tit">1.6-jdk-zh</div>
+                                            <div class="card-desc">jdk1.6在线文档</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.bejson.com/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">BEJSON</div>
+                                            <div class="card-desc">各种前端后端的在线小工具</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://www.alltoall.net"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">在线格式转换</div>
+                                            <div class="card-desc">各类文档转换pdf转word，pdf转jpg……</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a href="https://chrome.zzzmh.cn/"
+                                            class="card-link" target="_blank">
+                                            <div class="card-tit">极简插件</div>
+                                            <div class="card-desc">获取谷歌插件</div>
+                                        </a> </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-6"><a
+                                            href="https://adguard-vpn.com/zh_cn/welcome.html" class="card-link"
+                                            target="_blank">
+                                            <div class="card-tit">adguard-vpn</div>
+                                            <div class="card-desc">梯子</div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--页脚-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="rwo">
+                        <div class="col-md-12">
+                            <p>
+                                本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：huangxiaoyu13@foxmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-    
-<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
-<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript"> 
-window.onscroll = function(){
-//回到顶部
-var sllTop = document.documentElement.scrollTop||document.body.scrollTop;
-if(sllTop>240){
-  $('#get-top').css('display','block')
-}else{
-  $('#get-top').css('display','none')
-}
-}
-$('#get-top').click(function(){ 
-  $('body,html').animate({
-    scrollTop: 0
-  }, 500);//点击回到顶部按钮，数字越小越快
-})
-//判断用户使用的设备
-var deviceVal  = browserRedirect();
-function browserRedirect() {
-  var sUserAgent = navigator.userAgent.toLowerCase();
-  var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-  var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-  var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-  var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-  var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-  var bIsAndroid = sUserAgent.match(/android/i) == "android";
-  var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-  var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-  if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-    return 'phone';
-  } else {
-    return 'pc';
-  }
-}
-  $('.nav-btn').on('click', function () {
-    $('.nav').toggleClass('showNav');
-    $(this).toggleClass('animated2');
-  });
- 
-// 默认搜索引擎的内容，如果界面修改了需要同步修改
-var thisSearch = 'https://www.baidu.com/s?wd=';
+            <!--内容区域-->
+        </div>
+        <div id="get-top" title="回到顶部">
+            <img src="./img/Get-top.svg" />
+        </div>
+        <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
 
-$('#txt').keydown(function(ev){
-    // 回车键的处理
-    if(ev.keyCode==13){
-        window.open(thisSearch + $('#txt').val())
-        // $('#txt').val('');
-        $('#box ul').html('')
-    }
-})
-$(function(){
-  // 搜索引擎列表，样式一行五个内容，自动换行
-  var search = {
-    data: [{
-      name: '小众搜索',
-      url: 'https://www.caup.cn/search?q='
-    }, {
-      name: '百度',
-      url: 'https://www.baidu.com/s?wd='
-    }, {
-      name: '谷歌',
-      url: 'https://www.google.com/search?q='
-    }, {
-      name: '必应',
-      url: 'https://cn.bing.com/search?q='
-    }, {
-      name: '好搜',
-      url: 'https://www.so.com/s?q='
-    }, {
-      name: '搜狗',
-      url: 'https://www.sogou.com/web?query='
-    }, {
-      name: '淘宝',
-      url: 'https://s.taobao.com/search?q='
-    }, {
-      name: '京东',
-      url: 'http://search.jd.com/Search?keyword='
-    }, {
-      name: '天猫',
-      url: 'https://list.tmall.com/search_product.htm?q='
-    }, {
-      name: '1688',
-      url: 'https://s.1688.com/selloffer/offer_search.htm?keywords='
-    }, {
-      name: '知乎',
-      url: 'https://www.zhihu.com/search?type=content&q='
-    }, {
-      name: '微博',
-      url: 'https://s.weibo.com/weibo/'
-    }, {
-      name: 'Bilibili',
-      url: 'http://search.bilibili.com/all?keyword='
-    }, {
-      name: '豆瓣',
-      url: 'https://www.douban.com/search?source=suggest&q='
-    }, {
-      name: '优酷',
-      url: 'https://so.youku.com/search_video/q_'
-    }, {
-      name: 'GitHub',
-      url: 'https://github.com/search?q='
-    }]
-  }
-  for(var i = 0; i < search.data.length; i++){
-    var addList = '<li>' + search.data[i].name + '</li>'
-    $('.search-engine-list').append(addList);
-  }
-  $('.search-engine-name, .search-engine').hover(function() {
-    $('.search-engine').css('display', 'block')
-  }, function() {
-    $('.search-engine').css('display', 'none')
-  });
-  $('.search-engine-list li').click(function() {
-    var _index = $(this).index();
-    var searchNameBtn = document.getElementById("search-engine-name");
-    searchNameBtn.innerHTML = search.data[_index].name;
-    thisSearch = search.data[_index].url;
-    $('.search-engine').css('display', 'none')
-  })
-})
-$("#search-btn").click(function(){
-  var textValue = $('#txt').val();
-  if(textValue != ''){
-    window.open(thisSearch + textValue)
-  }
-});
-</script>
- 
-<!--引入APlayer.min.js-->
-<!-- <script src="./js/APlayer.min.js"></script> -->
-<!-- <script src="./js/Meting.min.js"></script> -->
-<!-- 
+
+        <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+        <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript">
+            window.onscroll = function () {
+                //回到顶部
+                var sllTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (sllTop > 240) {
+                    $('#get-top').css('display', 'block')
+                } else {
+                    $('#get-top').css('display', 'none')
+                }
+            }
+            $('#get-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);//点击回到顶部按钮，数字越小越快
+            })
+            //判断用户使用的设备
+            var deviceVal = browserRedirect();
+            function browserRedirect() {
+                var sUserAgent = navigator.userAgent.toLowerCase();
+                var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+                var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+                var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+                var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+                var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+                var bIsAndroid = sUserAgent.match(/android/i) == "android";
+                var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+                var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+                if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                    return 'phone';
+                } else {
+                    return 'pc';
+                }
+            }
+            $('.nav-btn').on('click', function () {
+                $('.nav').toggleClass('showNav');
+                $(this).toggleClass('animated2');
+            });
+
+            // 默认搜索引擎的内容，如果界面修改了需要同步修改
+            var thisSearch = 'https://www.baidu.com/s?wd=';
+
+            $('#txt').keydown(function (ev) {
+                // 回车键的处理
+                if (ev.keyCode == 13) {
+                    window.open(thisSearch + $('#txt').val())
+                    // $('#txt').val('');
+                    $('#box ul').html('')
+                }
+            })
+            $(function () {
+                // 搜索引擎列表，样式一行五个内容，自动换行
+                var search = {
+                    data: [{
+                        name: '小众搜索',
+                        url: 'https://www.caup.cn/search?q='
+                    }, {
+                        name: '百度',
+                        url: 'https://www.baidu.com/s?wd='
+                    }, {
+                        name: '谷歌',
+                        url: 'https://www.google.com/search?q='
+                    }, {
+                        name: '必应',
+                        url: 'https://cn.bing.com/search?q='
+                    }, {
+                        name: '好搜',
+                        url: 'https://www.so.com/s?q='
+                    }, {
+                        name: '搜狗',
+                        url: 'https://www.sogou.com/web?query='
+                    }, {
+                        name: '淘宝',
+                        url: 'https://s.taobao.com/search?q='
+                    }, {
+                        name: '京东',
+                        url: 'http://search.jd.com/Search?keyword='
+                    }, {
+                        name: '天猫',
+                        url: 'https://list.tmall.com/search_product.htm?q='
+                    }, {
+                        name: '1688',
+                        url: 'https://s.1688.com/selloffer/offer_search.htm?keywords='
+                    }, {
+                        name: '知乎',
+                        url: 'https://www.zhihu.com/search?type=content&q='
+                    }, {
+                        name: '微博',
+                        url: 'https://s.weibo.com/weibo/'
+                    }, {
+                        name: 'Bilibili',
+                        url: 'http://search.bilibili.com/all?keyword='
+                    }, {
+                        name: '豆瓣',
+                        url: 'https://www.douban.com/search?source=suggest&q='
+                    }, {
+                        name: '优酷',
+                        url: 'https://so.youku.com/search_video/q_'
+                    }, {
+                        name: 'GitHub',
+                        url: 'https://github.com/search?q='
+                    }]
+                }
+                for (var i = 0; i < search.data.length; i++) {
+                    var addList = '<li>' + search.data[i].name + '</li>'
+                    $('.search-engine-list').append(addList);
+                }
+                $('.search-engine-name, .search-engine').hover(function () {
+                    $('.search-engine').css('display', 'block')
+                }, function () {
+                    $('.search-engine').css('display', 'none')
+                });
+                $('.search-engine-list li').click(function () {
+                    var _index = $(this).index();
+                    var searchNameBtn = document.getElementById("search-engine-name");
+                    searchNameBtn.innerHTML = search.data[_index].name;
+                    thisSearch = search.data[_index].url;
+                    $('.search-engine').css('display', 'none')
+                })
+            })
+            $("#search-btn").click(function () {
+                var textValue = $('#txt').val();
+                if (textValue != '') {
+                    window.open(thisSearch + textValue)
+                }
+            });
+        </script>
+
+        <!--引入APlayer.min.js-->
+        <script src="./js/APlayer.min.js"></script>
+        <script src="./js/Meting.min.js"></script>
+        <!-- 
     选项	        默认	        描述
 id(编号)	        require	        歌曲ID /播放列表ID /专辑ID /搜索关键字
 server(平台)	    require	        音乐平台：netease，tencent，kugou，xiami，baidu
@@ -970,245 +1371,141 @@ list-folded（列表折叠）	false	    指示列表是否应该首先折叠
 list-max-height（最大高度）	340px	列出最大高度
 storage-name（储存名称）	metingjs	存储播放器设置的localStorage键 
 -->
-<!-- <meting-js 
-    server="netease" 
-    type="playlist" 
-    id="2239728234"
-    fixed="true" 
-    autoplay="true"
-    loop="all"
-    order="random"
-    preload="auto"
-    list-folded="ture"
-    list-max-height="500px"
-    lrc-type="0">
-</meting-js> -->
- <!-- waifu-tips.js 依赖 JQuery 库 -->
- <!-- <script src="./assets/jquery.min.js?v=3.3.1"></script> -->
-    
- <!-- 实现拖动效果，需引入 JQuery UI -->
- <!-- <script src="./assets/jquery-ui.min.js?v=1.12.1"></script> -->
- 
- <!-- <script type="text/javascript">
- /* 把 autoload.js 内容直接内置 */
- $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
- $.ajax({url: './assets/waifu-tips.js?v=1.4.2',dataType:"script", cache: true, async: false});
- $.ajax({url: './assets/live2d.min.js?v=1.0.5',dataType:"script", cache: true, async: false});
-     
- /* 可直接修改部分参数 */
- live2d_settings['hitokotoAPI'] = 'jinrishici.com'; // 一言 API
- live2d_settings['modelId'] = 2;                    // 默认模型 ID
- live2d_settings['modelTexturesId'] = 6;            // 默认材质 ID
- live2d_settings['modelStorage'] = false;           // 不储存模型 ID
- live2d_settings['canCloseLive2d'] = false;         // 隐藏 关闭看板娘 按钮
- live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
- live2d_settings['waifuSize'] = '200x200';          // 看板娘大小
- live2d_settings['waifuTipsSize'] = '100x50';      // 提示框大小
- live2d_settings['waifuFontSize'] = '10px';         // 提示框字体
- live2d_settings['waifuEdgeSide'] = 'right:55';     // 看板娘贴边方向
- live2d_settings['waifuToolFont'] = '15px';         // 工具栏字体
- live2d_settings['waifuToolLine'] = '30px';         // 工具栏行高
- live2d_settings['waifuToolTop'] = '-60px';         // 工具栏顶部边距
- live2d_settings['waifuDraggable'] = 'axis-x';      // 拖拽样式
-     
- /* 内置 waifu-tips.json */
- initModel({
-     "waifu": {
-         "console_open_msg": ["哈哈，你打开了控制台，是想要看看我的秘密吗？"],
-         "copy_message": ["你都复制了些什么呀，转载要记得加上出处哦"],
-         "screenshot_message": ["照好了嘛，是不是很可爱呢？"],
-         "hidden_message": ["我们还能再见面的吧…"],
-         "load_rand_textures": ["我还没有其他衣服呢", "我的新衣服好看嘛"],
-         "hour_tips": {
-             "t5-7": ["早上好！一日之计在于晨，美好的一天就要开始了"],
-             "t7-11": ["上午好！工作顺利嘛，不要久坐，多起来走动走动哦！"],
-             "t11-14": ["中午了，工作了一个上午，现在是午餐时间！"],
-             "t14-17": ["午后很容易犯困呢，今天的运动目标完成了吗？"],
-             "t17-19": ["傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~"],
-             "t19-21": ["晚上好，今天过得怎么样？"],
-             "t21-23": ["已经这么晚了呀，早点休息吧，晚安~"],
-             "t23-5": ["你是夜猫子呀？这么晚还不睡觉，明天起的来嘛"],
-             "default": ["嗨~ 快来逗我玩吧！"]
-         },
-         "referrer_message": {
-             "localhost": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
-             "baidu": ["Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
-             "so": ["Hello! 来自 360搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
-             "google": ["Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
-             "default": ["Hello! 来自 <span style=\"color:#0099cc;\">", "</span> 的朋友"],
-             "none": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "]
-         },
-         "referrer_hostname": {
-             "example.com": ["示例网站"],
-             "www.fghrsh.net": ["FGHRSH 的博客"]
-         },
-         "model_message": {
-             "1": ["来自 Potion Maker 的 Pio 酱 ~"],
-             "2": ["来自 Potion Maker 的 Tia 酱 ~"]  
-         },
-         "hitokoto_api_message": {
-             "lwl12.com": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>", "，是 <span style=\"color:#0099cc;\">{creator}</span> 投稿的", "。"],
-             "fghrsh.net": ["这句一言出处是 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">FGHRSH</span> 在 {date} 收藏的！"],
-             "jinrishici.com": ["这句诗词出自 <span style=\"color:#0099cc;\">《{title}》</span>，是 {dynasty}诗人 {author} 创作的！"],
-             "hitokoto.cn": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">{creator}</span> 在 hitokoto.cn 投稿的。"]
-         }
-     },
-     "mouseover": [
-         { "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
-         { "selector": ".fui-home", "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦"] },
-         { "selector": ".fui-chat", "text": ["一言一语，一颦一笑。一字一句，一颗赛艇。"] },
-         { "selector": ".fui-eye", "text": ["嗯··· 要切换 看板娘 吗？"] },
-         { "selector": ".fui-user", "text": ["喜欢换装 Play 吗？"] },
-         { "selector": ".fui-photo", "text": ["要拍张纪念照片吗？"] },
-         { "selector": ".fui-info-circle", "text": ["这里有关于我的信息呢"] },
-         { "selector": ".fui-cross", "text": ["你不喜欢我了吗..."] },
-         { "selector": "#tor_show", "text": ["翻页比较麻烦吗，点击可以显示这篇文章的目录呢"] },
-         { "selector": "#comment_go", "text": ["想要去评论些什么吗？"] },
-         { "selector": "#night_mode", "text": ["深夜时要爱护眼睛呀"] },
-         { "selector": "#qrcode", "text": ["手机扫一下就能继续看，很方便呢"] },
-         { "selector": ".comment_reply", "text": ["要吐槽些什么呢"] },
-         { "selector": "#back-to-top", "text": ["回到开始的地方吧"] },
-         { "selector": "#author", "text": ["该怎么称呼你呢"] },
-         { "selector": "#mail", "text": ["留下你的邮箱，不然就是无头像人士了"] },
-         { "selector": "#url", "text": ["你的家在哪里呢，好让我去参观参观"] },
-         { "selector": "#textarea", "text": ["认真填写哦，垃圾评论是禁止事项"] },
-         { "selector": ".OwO-logo", "text": ["要插入一个表情吗"] },
-         { "selector": "#csubmit", "text": ["要[提交]^(Commit)了吗，首次评论需要审核，请耐心等待~"] },
-         { "selector": ".ImageBox", "text": ["点击图片可以放大呢"] },
-         { "selector": "input[name=s]", "text": ["找不到想看的内容？搜索看看吧"] },
-         { "selector": ".previous", "text": ["去上一页看看吧"] },
-         { "selector": ".next", "text": ["去下一页看看吧"] },
-         { "selector": ".dropdown-toggle", "text": ["这里是菜单"] },
-         { "selector": "c-player a.play-icon", "text": ["想要听点音乐吗"] },
-         { "selector": "c-player div.time", "text": ["在这里可以调整<span style=\"color:#0099cc;\">播放进度</span>呢"] },
-         { "selector": "c-player div.volume", "text": ["在这里可以调整<span style=\"color:#0099cc;\">音量</span>呢"] },
-         { "selector": "c-player div.list-button", "text": ["<span style=\"color:#0099cc;\">播放列表</span>里都有什么呢"] },
-         { "selector": "c-player div.lyric-button", "text": ["有<span style=\"color:#0099cc;\">歌词</span>的话就能跟着一起唱呢"] },
-         { "selector": ".waifu #live2d", "text": ["干嘛呢你，快把手拿开", "鼠…鼠标放错地方了！"] }
-     ],
-     "click": [
-         {
-             "selector": ".waifu #live2d",
-             "text": [
-                 "是…是不小心碰到了吧",
-                 "萝莉控是什么呀",
-                 "你看到我的小熊了吗",
-                 "再摸的话我可要报警了！⌇●﹏●⌇",
-                 "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
-             ]
-         }
-     ],
-     "seasons": [
-         { "date": "01/01", "text": ["<span style=\"color:#0099cc;\">元旦</span>了呢，新的一年又开始了，今年是{year}年~"] },
-         { "date": "02/14", "text": ["又是一年<span style=\"color:#0099cc;\">情人节</span>，{year}年找到对象了嘛~"] },
-         { "date": "03/08", "text": ["今天是<span style=\"color:#0099cc;\">妇女节</span>！"] },
-         { "date": "03/12", "text": ["今天是<span style=\"color:#0099cc;\">植树节</span>，要保护环境呀"] },
-         { "date": "04/01", "text": ["悄悄告诉你一个秘密~<span style=\"background-color:#34495e;\">今天是愚人节，不要被骗了哦~</span>"] },
-         { "date": "05/01", "text": ["今天是<span style=\"color:#0099cc;\">五一劳动节</span>，计划好假期去哪里了吗~"] },
-         { "date": "06/01", "text": ["<span style=\"color:#0099cc;\">儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…"] },
-         { "date": "09/03", "text": ["<span style=\"color:#0099cc;\">中国人民抗日战争胜利纪念日</span>，铭记历史、缅怀先烈、珍爱和平、开创未来。"] },
-         { "date": "09/10", "text": ["<span style=\"color:#0099cc;\">教师节</span>，在学校要给老师问声好呀~"] },
-         { "date": "10/01", "text": ["<span style=\"color:#0099cc;\">国庆节</span>，新中国已经成立69年了呢"] },
-         { "date": "11/05-11/12", "text": ["今年的<span style=\"color:#0099cc;\">双十一</span>是和谁一起过的呢~"] },
-         { "date": "12/20-12/31", "text": ["这几天是<span style=\"color:#0099cc;\">圣诞节</span>，主人肯定又去剁手买买买了~"] }
-     ]
- });
- </script> -->
-<!-- <script src="./js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
+        <meting-js server="netease" type="playlist" id="2239728234" fixed="true" autoplay="true" loop="all"
+            order="random" preload="auto" list-folded="ture" list-max-height="500px" lrc-type="0">
+        </meting-js>
+        <!-- waifu-tips.js 依赖 JQuery 库 -->
+        <script src="./assets/jquery.min.js?v=3.3.1"></script>
 
-    $(function() {
-        getType();
-        function getType(){
-            tempdirectory='';
-            templist='';
-            $.ajax({
-                type: "get",
-                url: " http://175.178.69.233:8082/webAddress/queryTypeSum",
-                dataType: "json",
-                async:false,
-                success: function(res){
-                    var list = res;
+        <!-- 实现拖动效果，需引入 JQuery UI -->
+        <script src="./assets/jquery-ui.min.js?v=1.12.1"></script>
 
-                    for (var $j = 0; $j < list.length; $j++) {
+        <script type="text/javascript">
+            /* 把 autoload.js 内容直接内置 */
+            $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
+            $.ajax({ url: './assets/waifu-tips.js?v=1.4.2', dataType: "script", cache: true, async: false });
+            $.ajax({ url: './assets/live2d.min.js?v=1.0.5', dataType: "script", cache: true, async: false });
 
-                        tempdirectory +='<li><a href="#row-'+$j+'">'+list[$j].type_name+'</a></li>';
-                        templist+=
-                            '<section class="item card-box" id="row-'+$j+'">'+
-                            '<div class="container-fluid">'+
-                            '<div class="row">'+
-                            '<div class="item-tit" >'+
-                            '<strong>'+list[$j].type_name+'</strong>'+
-                            '<div class="clearfix" id="jsonList'+$j+'">'+
-                            '</div>'+
-                            '</div>'+
-                            '</div>'+
-                            '</div>'+
-                            '</section>'
+            /* 可直接修改部分参数 */
+            live2d_settings['hitokotoAPI'] = 'jinrishici.com'; // 一言 API
+            live2d_settings['modelId'] = 2;                    // 默认模型 ID
+            live2d_settings['modelTexturesId'] = 6;            // 默认材质 ID
+            live2d_settings['modelStorage'] = false;           // 不储存模型 ID
+            live2d_settings['canCloseLive2d'] = false;         // 隐藏 关闭看板娘 按钮
+            live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
+            live2d_settings['waifuSize'] = '200x200';          // 看板娘大小
+            live2d_settings['waifuTipsSize'] = '100x50';      // 提示框大小
+            live2d_settings['waifuFontSize'] = '10px';         // 提示框字体
+            live2d_settings['waifuEdgeSide'] = 'right:55';     // 看板娘贴边方向
+            live2d_settings['waifuToolFont'] = '15px';         // 工具栏字体
+            live2d_settings['waifuToolLine'] = '30px';         // 工具栏行高
+            live2d_settings['waifuToolTop'] = '-60px';         // 工具栏顶部边距
+            live2d_settings['waifuDraggable'] = 'axis-x';      // 拖拽样式
+
+            /* 内置 waifu-tips.json */
+            initModel({
+                "waifu": {
+                    "console_open_msg": ["哈哈，你打开了控制台，是想要看看我的秘密吗？"],
+                    "copy_message": ["你都复制了些什么呀，转载要记得加上出处哦"],
+                    "screenshot_message": ["照好了嘛，是不是很可爱呢？"],
+                    "hidden_message": ["我们还能再见面的吧…"],
+                    "load_rand_textures": ["我还没有其他衣服呢", "我的新衣服好看嘛"],
+                    "hour_tips": {
+                        "t5-7": ["早上好！一日之计在于晨，美好的一天就要开始了"],
+                        "t7-11": ["上午好！工作顺利嘛，不要久坐，多起来走动走动哦！"],
+                        "t11-14": ["中午了，工作了一个上午，现在是午餐时间！"],
+                        "t14-17": ["午后很容易犯困呢，今天的运动目标完成了吗？"],
+                        "t17-19": ["傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~"],
+                        "t19-21": ["晚上好，今天过得怎么样？"],
+                        "t21-23": ["已经这么晚了呀，早点休息吧，晚安~"],
+                        "t23-5": ["你是夜猫子呀？这么晚还不睡觉，明天起的来嘛"],
+                        "default": ["嗨~ 快来逗我玩吧！"]
+                    },
+                    "referrer_message": {
+                        "localhost": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
+                        "baidu": ["Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
+                        "so": ["Hello! 来自 360搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
+                        "google": ["Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
+                        "default": ["Hello! 来自 <span style=\"color:#0099cc;\">", "</span> 的朋友"],
+                        "none": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "]
+                    },
+                    "referrer_hostname": {
+                        "example.com": ["示例网站"],
+                        "www.fghrsh.net": ["FGHRSH 的博客"]
+                    },
+                    "model_message": {
+                        "1": ["来自 Potion Maker 的 Pio 酱 ~"],
+                        "2": ["来自 Potion Maker 的 Tia 酱 ~"]
+                    },
+                    "hitokoto_api_message": {
+                        "lwl12.com": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>", "，是 <span style=\"color:#0099cc;\">{creator}</span> 投稿的", "。"],
+                        "fghrsh.net": ["这句一言出处是 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">FGHRSH</span> 在 {date} 收藏的！"],
+                        "jinrishici.com": ["这句诗词出自 <span style=\"color:#0099cc;\">《{title}》</span>，是 {dynasty}诗人 {author} 创作的！"],
+                        "hitokoto.cn": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">{creator}</span> 在 hitokoto.cn 投稿的。"]
                     }
-                    $("#jsonUrlType").append(tempdirectory);
-                    $("#templist").append(templist);
-                }
-            });
-        }
-
-    });
-</script>
-<script src="./js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-<script defer=“ture” type="text/javascript">
-
-    $(function() {
-        var listUrlType='';
-        getType();
-        setTimeout(function () {
-            getUrl();
-        }, 200);
-        function getType(){
-            tempdirectory='';
-            templist='';
-            $.ajax({
-                type: "get",
-                url: " http://175.178.69.233:8082/webAddress/queryTypeSum",
-                dataType: "json",
-                async:false,
-                success: function(res){
-                    var list = res;
-                    listUrlType=res;
-                }
-            });
-        }
-        function getUrl() {
-
-            for (var $y = 0; $y < listUrlType.length; $y++) {
-                var temp = '';
-                var type=encodeURIComponent(listUrlType[$y].type_name);
-
-                $.ajax({
-                    type: "get",
-                    url: " http://175.178.69.233:8082/webAddress/queryAllType/"+type,
-                    dataType: "json",
-                    async:false,
-                    success: function(res) {
-                        var list = res;
-
-                        for(var $i = 0; $i < list.length; $i++) {
-                            temp +=
-                                '<div class="col-md-3 col-sm-4 col-xs-6">' +
-                                '<a href="' + list[$i].url + '" class="card-link" target="_blank">' +
-                                '<div class="card-tit">' + list[$i].url_name +'</div>' +
-                                '<div class="card-desc">' + list[$i].notes +'</div>' +
-                                '</a> '+
-                                '</div>';
-                        }
-                        $("#jsonList"+$y).append(temp);
+                },
+                "mouseover": [
+                    { "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+                    { "selector": ".fui-home", "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦"] },
+                    { "selector": ".fui-chat", "text": ["一言一语，一颦一笑。一字一句，一颗赛艇。"] },
+                    { "selector": ".fui-eye", "text": ["嗯··· 要切换 看板娘 吗？"] },
+                    { "selector": ".fui-user", "text": ["喜欢换装 Play 吗？"] },
+                    { "selector": ".fui-photo", "text": ["要拍张纪念照片吗？"] },
+                    { "selector": ".fui-info-circle", "text": ["这里有关于我的信息呢"] },
+                    { "selector": ".fui-cross", "text": ["你不喜欢我了吗..."] },
+                    { "selector": "#tor_show", "text": ["翻页比较麻烦吗，点击可以显示这篇文章的目录呢"] },
+                    { "selector": "#comment_go", "text": ["想要去评论些什么吗？"] },
+                    { "selector": "#night_mode", "text": ["深夜时要爱护眼睛呀"] },
+                    { "selector": "#qrcode", "text": ["手机扫一下就能继续看，很方便呢"] },
+                    { "selector": ".comment_reply", "text": ["要吐槽些什么呢"] },
+                    { "selector": "#back-to-top", "text": ["回到开始的地方吧"] },
+                    { "selector": "#author", "text": ["该怎么称呼你呢"] },
+                    { "selector": "#mail", "text": ["留下你的邮箱，不然就是无头像人士了"] },
+                    { "selector": "#url", "text": ["你的家在哪里呢，好让我去参观参观"] },
+                    { "selector": "#textarea", "text": ["认真填写哦，垃圾评论是禁止事项"] },
+                    { "selector": ".OwO-logo", "text": ["要插入一个表情吗"] },
+                    { "selector": "#csubmit", "text": ["要[提交]^(Commit)了吗，首次评论需要审核，请耐心等待~"] },
+                    { "selector": ".ImageBox", "text": ["点击图片可以放大呢"] },
+                    { "selector": "input[name=s]", "text": ["找不到想看的内容？搜索看看吧"] },
+                    { "selector": ".previous", "text": ["去上一页看看吧"] },
+                    { "selector": ".next", "text": ["去下一页看看吧"] },
+                    { "selector": ".dropdown-toggle", "text": ["这里是菜单"] },
+                    { "selector": "c-player a.play-icon", "text": ["想要听点音乐吗"] },
+                    { "selector": "c-player div.time", "text": ["在这里可以调整<span style=\"color:#0099cc;\">播放进度</span>呢"] },
+                    { "selector": "c-player div.volume", "text": ["在这里可以调整<span style=\"color:#0099cc;\">音量</span>呢"] },
+                    { "selector": "c-player div.list-button", "text": ["<span style=\"color:#0099cc;\">播放列表</span>里都有什么呢"] },
+                    { "selector": "c-player div.lyric-button", "text": ["有<span style=\"color:#0099cc;\">歌词</span>的话就能跟着一起唱呢"] },
+                    { "selector": ".waifu #live2d", "text": ["干嘛呢你，快把手拿开", "鼠…鼠标放错地方了！"] }
+                ],
+                "click": [
+                    {
+                        "selector": ".waifu #live2d",
+                        "text": [
+                            "是…是不小心碰到了吧",
+                            "萝莉控是什么呀",
+                            "你看到我的小熊了吗",
+                            "再摸的话我可要报警了！⌇●﹏●⌇",
+                            "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
+                        ]
                     }
-                });
-            }
-        }
-
-    });
-</script> -->
-*/
-</div>
+                ],
+                "seasons": [
+                    { "date": "01/01", "text": ["<span style=\"color:#0099cc;\">元旦</span>了呢，新的一年又开始了，今年是{year}年~"] },
+                    { "date": "02/14", "text": ["又是一年<span style=\"color:#0099cc;\">情人节</span>，{year}年找到对象了嘛~"] },
+                    { "date": "03/08", "text": ["今天是<span style=\"color:#0099cc;\">妇女节</span>！"] },
+                    { "date": "03/12", "text": ["今天是<span style=\"color:#0099cc;\">植树节</span>，要保护环境呀"] },
+                    { "date": "04/01", "text": ["悄悄告诉你一个秘密~<span style=\"background-color:#34495e;\">今天是愚人节，不要被骗了哦~</span>"] },
+                    { "date": "05/01", "text": ["今天是<span style=\"color:#0099cc;\">五一劳动节</span>，计划好假期去哪里了吗~"] },
+                    { "date": "06/01", "text": ["<span style=\"color:#0099cc;\">儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…"] },
+                    { "date": "09/03", "text": ["<span style=\"color:#0099cc;\">中国人民抗日战争胜利纪念日</span>，铭记历史、缅怀先烈、珍爱和平、开创未来。"] },
+                    { "date": "09/10", "text": ["<span style=\"color:#0099cc;\">教师节</span>，在学校要给老师问声好呀~"] },
+                    { "date": "10/01", "text": ["<span style=\"color:#0099cc;\">国庆节</span>，新中国已经成立69年了呢"] },
+                    { "date": "11/05-11/12", "text": ["今年的<span style=\"color:#0099cc;\">双十一</span>是和谁一起过的呢~"] },
+                    { "date": "12/20-12/31", "text": ["这几天是<span style=\"color:#0099cc;\">圣诞节</span>，主人肯定又去剁手买买买了~"] }
+                ]
+            });
+        </script>
+    </div>
 </body>
+
 </html>
